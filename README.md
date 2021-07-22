@@ -2,33 +2,46 @@
 
 ## MVP
 
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
+## Server (Back End)
+Have a RESTful JSON API.
+Build a Ruby on Rails server, exposing RESTful JSON endpoints.
+Build a database with at least 3 tables:
+There must be at least 1 association between your tables. (1:m or m:m)
+Utilize Rails to define models for interacting with the database.
+Implement working generic controller actions for Full CRUD (index, show, create, update, delete) between your non-User tables
+Note that if you choose to do Authentication, CRUD on your User table does not count toward this requirement.
 
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
-
-<br>
+## Client (Front End)
+Have a working, interactive React app, built using npx create-react-app.
+Have at least 8 separate, rendered components in an organized and understandable React file structure.
+Utilize functional or class React components appropriately.
+Utilize state and props in your components efficiently.
+Use only React for DOM Manipulation.
+Consume data from your Ruby on Rails API, and render that data in your components.
+Utilize React Router, for client-side routing.
+Demonstrate Full CRUD actions ( index, show, create, update, and delete ) on the front end.
+Note that if you decide to implement Auth, your full CRUD actions must be covered amongst your non-User tables.
 
 ### Goals
-
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
-
-<br>
+- have backend done by friday july 24/21
+- have the backend deployed the same day its done
+- setup my FE and start working on it by saturday july 25/21
+- have the app functionality done by monday july 27/21
+- work css untill Wednesday july 29/21
+- the app must be fully ready on wednesday by 12 pm by any means
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | _frontend design ._ |
+|   React Router   | _frontend design ._ |
+| React SemanticUI | _seting up my components structure ._ |
+|     Express      | _diployment ._ |
+|  Express Router  | _diployment._ |
+|  Ruby  | _seting up BE._ |
+|  Rails  | _seting up BE._ |
 
 <br>
 
@@ -36,41 +49,12 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
-
-![Dummy Link](url)
-
-- Desktop Landing
-
-![Dummy Link](url)
-
-- Desktop Hero
-
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
-
+- figma:
+      https://www.figma.com/file/6VQ7VbxtaZIoQft0jgev1t/Aqua-Hunters?node-id=0%3A1
 #### Component Tree
-
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
-
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
-
+ - lucidcharts: 
+ https://lucid.app/lucidchart/fbafe3b7-c166-4524-80f6-0a367a4b07e4/edit?viewport_loc=751%2C-69%2C2020%2C1012%2C0_0&invitationId=inv_df0e3812-b946-412d-852e-84b31611af61
 #### Component Architecture
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
 
 ``` structure
 
@@ -101,7 +85,7 @@ src
 | set up spicies detail screen&component   |          |     6 hrs      |     3 hrs     |     TBD     |
 | set up edit & delete forms |          |     6 hrs      |     3 hrs     |     TBD     |
 | work css|          |     15 hrs      |     15 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| TOTAL               |          |       |     3 hrs     |     TBD     |
 
 
 ### Server (Back End)
