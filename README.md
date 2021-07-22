@@ -48,12 +48,13 @@ Note that if you decide to implement Auth, your full CRUD actions must be covere
 ### Client (Front End)
 
 #### Wireframes
-
+- ERD:
+- https://app.diagrams.net/#HSiyavashTorabi%2FAqua-Hunters%2Fmain%2FUntitled%20Diagram.drawio
 - figma:
-      https://www.figma.com/file/6VQ7VbxtaZIoQft0jgev1t/Aqua-Hunters?node-id=0%3A1
+- https://www.figma.com/file/6VQ7VbxtaZIoQft0jgev1t/Aqua-Hunters?node-id=0%3A1
 #### Component Tree
  - lucidcharts: 
- https://lucid.app/lucidchart/fbafe3b7-c166-4524-80f6-0a367a4b07e4/edit?viewport_loc=751%2C-69%2C2020%2C1012%2C0_0&invitationId=inv_df0e3812-b946-412d-852e-84b31611af61
+ - https://lucid.app/lucidchart/fbafe3b7-c166-4524-80f6-0a367a4b07e4/edit?viewport_loc=751%2C-69%2C2020%2C1012%2C0_0&invitationId=inv_df0e3812-b946-412d-852e-84b31611af61
 #### Component Architecture
 
 ``` structure
