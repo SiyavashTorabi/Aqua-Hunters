@@ -85,7 +85,7 @@ src
 | set up spicies detail screen&component   |          |     6 hrs      |     3 hrs     |     TBD     |
 | set up edit & delete forms |          |     6 hrs      |     3 hrs     |     TBD     |
 | work css|          |     15 hrs      |     15 hrs     |     TBD     |
-| TOTAL               |          |       |     3 hrs     |     TBD     |
+| TOTAL               |          |       |        |     TBD     |
 
 
 ### Server (Back End)
@@ -93,8 +93,8 @@ src
 
 ## Post-MVP
 - User aouth 
-- drop down button
-- hover over spicies effect
+- Drop down button
+- Hover over spicies effect
 
 ***
 
