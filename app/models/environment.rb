@@ -1,7 +1,3 @@
 class Environment < ApplicationRecord
-has_many :species, dependent: :destroy
-
-
-
-
+  has_many :species
 end
