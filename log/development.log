@@ -1059,3 +1059,159 @@ Processing by SpeciesController#show as */*
 Completed 200 OK in 13ms (Views: 1.0ms | ActiveRecord: 5.5ms | Allocations: 802)
 
 
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE DATABASE "Aqua_Hunters_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "Aqua_Hunters_test" ENCODING = 'unicode'[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35mSQL (1.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (41.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "environments" CASCADE[0m
+  [1m[35m (18.3ms)[0m  [1m[35mCREATE TABLE "environments" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "regions" CASCADE[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "regions" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "species" CASCADE[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "species" ("id" bigserial primary key, "name" character varying, "description" character varying, "img_url" character varying, "environment_id" bigint NOT NULL, "region_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_species_on_environment_id" ON "species" ("environment_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE INDEX "index_species_on_region_id" ON "species" ("region_id")[0m
+  [1m[35m (6.4ms)[0m  [1m[35mALTER TABLE "species" ADD CONSTRAINT "fk_rails_b9678ecf22"
+FOREIGN KEY ("environment_id")
+  REFERENCES "environments" ("id")
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "species" ADD CONSTRAINT "fk_rails_be93eeae03"
+FOREIGN KEY ("region_id")
+  REFERENCES "regions" ("id")
+[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (14.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "environments" CASCADE[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "environments" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "regions" CASCADE[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "regions" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "species" CASCADE[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "species" ("id" bigserial primary key, "name" character varying, "description" character varying, "img_url" character varying, "environment_id" bigint NOT NULL, "region_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_species_on_environment_id" ON "species" ("environment_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE INDEX "index_species_on_region_id" ON "species" ("region_id")[0m
+  [1m[35m (3.3ms)[0m  [1m[35mALTER TABLE "species" ADD CONSTRAINT "fk_rails_b9678ecf22"
+FOREIGN KEY ("environment_id")
+  REFERENCES "environments" ("id")
+[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "species" ADD CONSTRAINT "fk_rails_be93eeae03"
+FOREIGN KEY ("region_id")
+  REFERENCES "regions" ("id")
+[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (5.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2021-07-23 15:48:31.427867"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-07-23 15:48:31.459178"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE DATABASE "Aqua_Hunters_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "Aqua_Hunters_test" ENCODING = 'unicode'[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (2.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "environments" CASCADE[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "environments" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "regions" CASCADE[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "regions" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "species" CASCADE[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "species" ("id" bigserial primary key, "name" character varying, "description" character varying, "img_url" character varying, "environment_id" bigint NOT NULL, "region_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_species_on_environment_id" ON "species" ("environment_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE INDEX "index_species_on_region_id" ON "species" ("region_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "species" ADD CONSTRAINT "fk_rails_b9678ecf22"
+FOREIGN KEY ("environment_id")
+  REFERENCES "environments" ("id")
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "species" ADD CONSTRAINT "fk_rails_be93eeae03"
+FOREIGN KEY ("region_id")
+  REFERENCES "regions" ("id")
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (3.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "environments" CASCADE[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "environments" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "regions" CASCADE[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "regions" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "species" CASCADE[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "species" ("id" bigserial primary key, "name" character varying, "description" character varying, "img_url" character varying, "environment_id" bigint NOT NULL, "region_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_species_on_environment_id" ON "species" ("environment_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_species_on_region_id" ON "species" ("region_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "species" ADD CONSTRAINT "fk_rails_b9678ecf22"
+FOREIGN KEY ("environment_id")
+  REFERENCES "environments" ("id")
+[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "species" ADD CONSTRAINT "fk_rails_be93eeae03"
+FOREIGN KEY ("region_id")
+  REFERENCES "regions" ("id")
+[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2021-07-23 15:49:39.662454"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-07-23 15:49:39.676170"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  [1m[36mEnvironment Load (0.2ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEnvironment Create (0.3ms)[0m  [1m[32mINSERT INTO "environments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Salt Water"], ["created_at", "2021-07-23 15:49:39.736893"], ["updated_at", "2021-07-23 15:49:39.736893"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEnvironment Create (0.1ms)[0m  [1m[32mINSERT INTO "environments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fresh Water"], ["created_at", "2021-07-23 15:49:39.739941"], ["updated_at", "2021-07-23 15:49:39.739941"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "environments"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Create (0.2ms)[0m  [1m[32mINSERT INTO "regions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "S America"], ["created_at", "2021-07-23 15:49:39.746790"], ["updated_at", "2021-07-23 15:49:39.746790"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Create (0.1ms)[0m  [1m[32mINSERT INTO "regions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "N America"], ["created_at", "2021-07-23 15:49:39.749276"], ["updated_at", "2021-07-23 15:49:39.749276"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Create (0.1ms)[0m  [1m[32mINSERT INTO "regions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "S Asia"], ["created_at", "2021-07-23 15:49:39.751580"], ["updated_at", "2021-07-23 15:49:39.751580"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Create (0.1ms)[0m  [1m[32mINSERT INTO "regions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "N/S America"], ["created_at", "2021-07-23 15:49:39.753699"], ["updated_at", "2021-07-23 15:49:39.753699"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "regions"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSpecies Create (4.9ms)[0m  [1m[32mINSERT INTO "species" ("name", "description", "img_url", "environment_id", "region_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Ranbow Trout"], ["description", "Method of catch: Worms. Live nymphs and minnows (best used in winter) Kernel corn and colored marshmallows combind with a medium size rod and reel would be the easies way to catch a trouth since they dont  usually grow over 36 inches."], ["img_url", "https://vtfishandwildlife.com/sites/fishandwildlife/files/images/Fish/Fishing%20Opportunities/Sportfish%20of%20Vermont/Rainbow%20Trout/rainbowtrout.jpg"], ["environment_id", 2], ["region_id", 2], ["created_at", "2021-07-23 15:49:39.764973"], ["updated_at", "2021-07-23 15:49:39.764973"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSpecies Create (0.4ms)[0m  [1m[32mINSERT INTO "species" ("name", "description", "img_url", "environment_id", "region_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Asian carp"], ["description", "Method of catch: Worms. Live nymphs and minnows (best used in winter) Kernel corn and colored marshmallows combind with a heavy road and reel since they grow over 30 inches and can weigh over 30 pounds."], ["img_url", "https://i2.wp.com/hillnotes.ca/wp-content/uploads/2017/08/Carp.jpg?fit=700%2C401&ssl=1"], ["environment_id", 2], ["region_id", 3], ["created_at", "2021-07-23 15:49:39.774129"], ["updated_at", "2021-07-23 15:49:39.774129"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSpecies Create (0.7ms)[0m  [1m[32mINSERT INTO "species" ("name", "description", "img_url", "environment_id", "region_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Grass carp"], ["description", "Method of catch: Worms. Live nymphs and minnows (best used in winter) Kernel corn and colored marshmallows combind with a heavy road and reel since they grow over 30 inches and can weigh over 30 pounds."], ["img_url", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpNCo6yxhowzRaENNbq1Gh9UjYu0ZcdaO9TOCUDzrusmz9a64MWV14Terkst0wB2tTQpI&usqp=CAU"], ["environment_id", 2], ["region_id", 2], ["created_at", "2021-07-23 15:49:39.777550"], ["updated_at", "2021-07-23 15:49:39.777550"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSpecies Create (0.5ms)[0m  [1m[32mINSERT INTO "species" ("name", "description", "img_url", "environment_id", "region_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Large Mouth Bass"], ["description", "Method of catch: Largemouth Bass readily eat a variety of baits, although many fishermen choose to pursue them primarily or exclusively with artificial lures. Some good baits include crayfish, shad, and bluegill (where legal). Generally, any small fish that is legal to use should get attacked by a bass."], ["img_url", "https://www.ncwildlife.org/Portals/0/Learning/images/Species/Fish/Largemouth-Bass-Duane-Raver.jpg"], ["environment_id", 2], ["region_id", 2], ["created_at", "2021-07-23 15:49:39.780593"], ["updated_at", "2021-07-23 15:49:39.780593"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSpecies Create (0.6ms)[0m  [1m[32mINSERT INTO "species" ("name", "description", "img_url", "environment_id", "region_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "small Mouth Bass"], ["description", "Method of catch: A football jig is a tried and true bait for catching smallmouth. Pair the jigs rubber skit with a crawfish plastic trailer or grub to provide lifelike action."], ["img_url", "https://lh3.googleusercontent.com/proxy/-lGXrTm3LwaCnkpFvRyfFg1BbUViqGk4a56TU8ouNsn4uWguGMK7-gzJvF5JhckznU9IIrQoNpH_ydg"], ["environment_id", 2], ["region_id", 4], ["created_at", "2021-07-23 15:49:39.783172"], ["updated_at", "2021-07-23 15:49:39.783172"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSpecies Create (0.6ms)[0m  [1m[32mINSERT INTO "species" ("name", "description", "img_url", "environment_id", "region_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Red Drum"], ["description", "The best natural baits are live shrimp, small finger mullet, Atlantic croaker, and small live blue crabs. Live shrimp are fished under a popping cork or  using a small weight and letting the shrimp swim freely."], ["img_url", "https://lh3.googleusercontent.com/proxy/kNx0O94Okwz4N_s-X-6qvXYr_ff1f3cLSsKvqQxDmu7gAAAsXCk3esHZhKWum2MbOfUlXsPreHW0ZvJFOFmNDFNyQ9bNZeIYKkxJo2njVzm-1oo98dJ-d7rfJgJafx4q2w"], ["environment_id", 1], ["region_id", 1], ["created_at", "2021-07-23 15:49:39.785901"], ["updated_at", "2021-07-23 15:49:39.785901"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "species"[0m

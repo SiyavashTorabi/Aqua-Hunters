@@ -12,6 +12,7 @@ puts "#{Environment.count} Enviroments created"
 @s_america = Region.create!(name: "S America") 
 @n_america = Region.create!(name: "N America") 
 @s_asia = Region.create!(name: "S Asia") 
+@ns_america = Region.create!(name: "N/S America")
 puts "#{Region.count} Regions created"
 
 
@@ -25,7 +26,13 @@ puts "#{Region.count} Regions created"
 @grass_carp = Species.create!(name: "Grass carp",description: "Method of catch: Worms. Live nymphs and minnows (best used in winter) Kernel corn and colored marshmallows combind with a heavy road and reel since they grow over 30 inches and can weigh over 30 pounds.", img_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpNCo6yxhowzRaENNbq1Gh9UjYu0ZcdaO9TOCUDzrusmz9a64MWV14Terkst0wB2tTQpI&usqp=CAU", environment: @fresh_water, region: @n_america)
 
 
-@Large_mouth_bass = Species.create!(name: "Large Mouth Bass",description: "Method of catch: Worms. Largemouth Bass readily eat a variety of baits, although many fishermen choose to pursue them primarily or exclusively with artificial lures. Some good baits include crayfish, shad, and bluegill (where legal). Generally, any small fish that is legal to use should get attacked by a bass.", img_url: "https://www.ncwildlife.org/Portals/0/Learning/images/Species/Fish/Largemouth-Bass-Duane-Raver.jpg", environment: @fresh_water, region: @n_america)
+@Large_mouth_bass = Species.create!(name: "Large Mouth Bass",description: "Method of catch: Largemouth Bass readily eat a variety of baits, although many fishermen choose to pursue them primarily or exclusively with artificial lures. Some good baits include crayfish, shad, and bluegill (where legal). Generally, any small fish that is legal to use should get attacked by a bass.", img_url: "https://www.ncwildlife.org/Portals/0/Learning/images/Species/Fish/Largemouth-Bass-Duane-Raver.jpg", environment: @fresh_water, region: @n_america)
+
+
+@small_mouth_bass = Species.create!(name: "small Mouth Bass",description: "Method of catch: A football jig is a tried and true bait for catching smallmouth. Pair the jigs rubber skit with a crawfish plastic trailer or grub to provide lifelike action.", img_url: "https://lh3.googleusercontent.com/proxy/-lGXrTm3LwaCnkpFvRyfFg1BbUViqGk4a56TU8ouNsn4uWguGMK7-gzJvF5JhckznU9IIrQoNpH_ydg", environment: @fresh_water, region: @ns_america)
+
+
+@red_drum = Species.create!(name: "Red Drum",description: "The best natural baits are live shrimp, small finger mullet, Atlantic croaker, and small live blue crabs. Live shrimp are fished under a popping cork or  using a small weight and letting the shrimp swim freely.", img_url: "https://lh3.googleusercontent.com/proxy/kNx0O94Okwz4N_s-X-6qvXYr_ff1f3cLSsKvqQxDmu7gAAAsXCk3esHZhKWum2MbOfUlXsPreHW0ZvJFOFmNDFNyQ9bNZeIYKkxJo2njVzm-1oo98dJ-d7rfJgJafx4q2w", environment: @salt_water, region: @s_america)
 
 
 # @rainbow_trout.region << @s_america 
