@@ -5,12 +5,13 @@ class SpeciesController < ApplicationController
   def index
     @species = Species.all
 
-    render json: @species, include: [:environment, :region]
+    render json: @species, include: [:environment, :region], status: :ok
   end
 
   # GET /species/1
   def show
-    render json: @species
+    
+    render json: @species, include: [:environment, :region], status: :ok
   end
 
   # POST /species

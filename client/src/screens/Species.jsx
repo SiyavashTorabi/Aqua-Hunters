@@ -19,7 +19,6 @@ export default function Species(props) {
     <>
       <div className="">
         {species.map((specie, index) => {
-         
           
           return (
             <div key={index}>
