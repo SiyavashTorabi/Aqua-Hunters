@@ -1,5 +1,5 @@
 class Species < ApplicationRecord
-  belongs_to :environment, dependent: :destroy
+  belongs_to :environment
 
-  belongs_to :region, dependent: :destroy
+  belongs_to :region
 end

@@ -29,10 +29,10 @@ puts "#{Region.count} Regions created"
 @Large_mouth_bass = Species.create!(name: "Large Mouth Bass",description: "Method of catch: Largemouth Bass readily eat a variety of baits, although many fishermen choose to pursue them primarily or exclusively with artificial lures. Some good baits include crayfish, shad, and bluegill (where legal). Generally, any small fish that is legal to use should get attacked by a bass.", img_url: "https://www.ncwildlife.org/Portals/0/Learning/images/Species/Fish/Largemouth-Bass-Duane-Raver.jpg", environment: @fresh_water, region: @n_america)
 
 
-@small_mouth_bass = Species.create!(name: "small Mouth Bass",description: "Method of catch: A football jig is a tried and true bait for catching smallmouth. Pair the jigs rubber skit with a crawfish plastic trailer or grub to provide lifelike action.", img_url: "https://lh3.googleusercontent.com/proxy/-lGXrTm3LwaCnkpFvRyfFg1BbUViqGk4a56TU8ouNsn4uWguGMK7-gzJvF5JhckznU9IIrQoNpH_ydg", environment: @fresh_water, region: @ns_america)
+@small_mouth_bass = Species.create!(name: "small Mouth Bass",description: "Method of catch: A football jig is a tried and true bait for catching smallmouth. Pair the jigs rubber skit with a crawfish plastic trailer or grub to provide lifelike action.", img_url: "https://www.tackleshare.com/wp-content/uploads/2021/05/smallmouthbass_img.jpg", environment: @fresh_water, region: @ns_america)
 
 
-@red_drum = Species.create!(name: "Red Drum",description: "The best natural baits are live shrimp, small finger mullet, Atlantic croaker, and small live blue crabs. Live shrimp are fished under a popping cork or  using a small weight and letting the shrimp swim freely.", img_url: "https://lh3.googleusercontent.com/proxy/kNx0O94Okwz4N_s-X-6qvXYr_ff1f3cLSsKvqQxDmu7gAAAsXCk3esHZhKWum2MbOfUlXsPreHW0ZvJFOFmNDFNyQ9bNZeIYKkxJo2njVzm-1oo98dJ-d7rfJgJafx4q2w", environment: @salt_water, region: @s_america)
+@red_drum = Species.create!(name: "Red Drum",description: "The best natural baits are live shrimp, small finger mullet, Atlantic croaker, and small live blue crabs. Live shrimp are fished under a popping cork or  using a small weight and letting the shrimp swim freely.", img_url: "https://gcrl.usm.edu/public/fish/images/red.drum/red.drum.diane.peebles.500.jpg", environment: @salt_water, region: @s_america)
 
 
 # @rainbow_trout.region << @s_america 

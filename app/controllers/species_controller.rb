@@ -5,7 +5,7 @@ class SpeciesController < ApplicationController
   def index
     @species = Species.all
 
-    render json: @species
+    render json: @species, include: [:environment, :region]
   end
 
   # GET /species/1

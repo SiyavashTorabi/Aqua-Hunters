@@ -1,6 +1,6 @@
 import api from './api-config';
 
-export const getAllSpecies = async () => {
+export const getSpecies = async () => {
 	const resp = await api.get('/species');
 	return resp.data;
 };
