@@ -1,10 +1,16 @@
-import { useState, useEffect } from "react";
 
 import { useParams, Redirect } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { getAllRegions } from "../services/region";
+import { getAllEnvironments } from "../services/environments";
 
 import { getOneSpecie, putSpecie } from "../services/species";
 
 const SpecieEdit = (props) => {
+
+  const [regions, setRegions] = useState([]);
+  const [environments, setEnvironments] = useState([]);
+
   const [specie, setSpecie] = useState({
     name: "",
     description: "",
@@ -15,7 +21,7 @@ const SpecieEdit = (props) => {
   let { id } = useParams();
 
   useEffect(() => {
-    const fetchProduct = async () => {
+    const fetchSpecie = async () => {
       const specie= await getOneSpecie(id);
       setSpecie(specie);
     };
@@ -24,21 +30,36 @@ const SpecieEdit = (props) => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setProduct({
-      ...product,
+    setSpecie({
+      ...specie,
       [name]: value,
     });
   };
 
+  useEffect(() => {
+    const fetchDropDowns = async () => {
+      const regions = await getAllRegions();
+      const environments = await getAllEnvironments();
+      setRegions(regions);
+      setEnvironments(environments);
+    };
+    fetchDropDowns();
+  }, []);
+
+
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const updated = await updateProduct(id, specie);
+    const updated = await putSpecie(id, specie);
     setUpdated(updated);
   };
 
   if (isUpdated) {
     return <Redirect to={`/species/${id}`} />;
   }
+
+  
+
+
 
   return (
     <>
@@ -107,11 +128,11 @@ const SpecieEdit = (props) => {
       </select>
 
       <button type="submit" className="create-button">
-        Add
+        Edit
       </button>
     </form>
   </>
   );
 };
 
-export default ProductEdit;
+export default SpecieEdit;

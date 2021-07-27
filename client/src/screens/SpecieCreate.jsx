@@ -77,25 +77,6 @@ const SpecieCreate = (props) => {
           name="description"
           required
         />
-        {/* <textarea
-          className="mt-5 bg-green-200"
-          rows={10}
-          placeholder="environment"
-          value={specie.environment.name}
-          name="environment"
-          required
-          onChange={handleChange}
-        />
-        <textarea
-          className="mt-5 bg-green-200"
-          rows={10}
-          placeholder="region"
-          value={specie.region.name}
-          name="region"
-          required
-          onChange={handleChange}
-        /> */}
-
         <select name="region_id">
           <option default hidden required>
             select the region

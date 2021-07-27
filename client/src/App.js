@@ -4,6 +4,7 @@ import Home from './screens/Home'
 import Navbar from "./components/Navbar"
 import SpecieDetail from './screens/SpecieDetail'
 import SpecieCreate from "./screens/SpecieCreate"
+import SpecieEdit from "./screens/SpecieEdit"
 function App() {
   return (
     <div>
@@ -15,6 +16,10 @@ function App() {
         
         <Route exact path="/species">
           <Species />
+        </Route>
+
+        <Route exact path="/species/:id/edit">
+          <SpecieEdit />
         </Route>
 
         <Route exact path="/species/:id">
