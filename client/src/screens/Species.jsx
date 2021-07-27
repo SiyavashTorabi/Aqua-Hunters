@@ -15,11 +15,11 @@ export default function Species(props) {
     fetchSpecies();
   }, []);
 
+  
 	return (
     <>
       <div className="">
         {species.map((specie, index) => {
-         
           
           return (
             <div key={index}>

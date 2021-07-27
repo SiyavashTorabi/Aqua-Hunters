@@ -5,16 +5,18 @@ class SpeciesController < ApplicationController
   def index
     @species = Species.all
 
-    render json: @species, include: [:environment, :region]
+    render json: @species, include: [:environment, :region], status: :ok
   end
 
   # GET /species/1
   def show
-    render json: @species
+    
+    render json: @species, include: [:environment, :region], status: :ok
   end
 
   # POST /species
   def create
+  
     @species = Species.new(species_params)
 
     if @species.save
@@ -46,6 +48,6 @@ class SpeciesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def species_params
-      params.require(:species).permit(:name, :description, :img_url, :environment_id, :region, :references)
+      params.require(:species).permit(:name, :description, :img_url, :environment_id, :region_id, :references)
     end
 end

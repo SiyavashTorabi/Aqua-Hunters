@@ -30,6 +30,7 @@ const SpecieDetail = (props) => {
     console.log(res);
     history.push("/species");
   };
+  console.log(specie)
   return (
     <>
       <div className="species-detail">
@@ -43,7 +44,8 @@ const SpecieDetail = (props) => {
           <div className="detail ">
             <div className="title text-xl">{specie.name}</div>
             <div className="description text-base">{specie.description}</div>
-            <div className="price text-sm">{specie.region}</div>
+            <div className="price text-sm">{specie.region.name}</div>
+            <div className="price text-sm">{specie.environment.name}</div>
 
         
 

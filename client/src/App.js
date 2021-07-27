@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router";
 import Home from './screens/Home'
 import Navbar from "./components/Navbar"
 import SpecieDetail from './screens/SpecieDetail'
-
+import SpecieCreate from "./screens/SpecieCreate"
 function App() {
   return (
     <div>
@@ -19,6 +19,9 @@ function App() {
 
         <Route exact path="/species/:id">
           <SpecieDetail />
+        </Route>
+        <Route path="/add-Specie">
+          <SpecieCreate />
         </Route>
 
       </Switch>
