@@ -16,6 +16,7 @@ class SpeciesController < ApplicationController
 
   # POST /species
   def create
+  
     @species = Species.new(species_params)
 
     if @species.save
@@ -47,6 +48,6 @@ class SpeciesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def species_params
-      params.require(:species).permit(:name, :description, :img_url, :environment_id, :region, :references)
+      params.require(:species).permit(:name, :description, :img_url, :environment_id, :region_id, :references)
     end
 end

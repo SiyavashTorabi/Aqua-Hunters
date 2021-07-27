@@ -11,17 +11,17 @@ export const getOneSpecie = async (id) => {
 };
 
 export const postSpecie = async (specieData) => {
-	const resp = await api.post('/specie', { specie: specieData });
+	const resp = await api.post('/species', { species: specieData });
 	return resp.data;
 };
 
 export const putSpecie = async (id, specieData) => {
-	const resp = await api.put(`/specie/${id}`, { specie: specieData });
+	const resp = await api.put(`/species/${id}`, { species: specieData });
 	return resp.data;
 };
 
 export const deleteSpecie = async (id) => {
-	const resp = await api.delete(`/specie/${id}`);
+	const resp = await api.delete(`/species/${id}`);
 	return resp;
 };
 

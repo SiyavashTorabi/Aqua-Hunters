@@ -1,23 +1,33 @@
-import { useState } from "react";
-import "./ProductCreate.css"
-
+import { useState, useEffect } from "react";
+import "./ProductCreate.css";
+import { getAllRegions } from "../services/region";
+import { getAllEnvironments } from "../services/environments";
 import { Redirect } from "react-router-dom";
 import { postSpecie } from "../services/species";
 
 const SpecieCreate = (props) => {
+  const [isCreated, setCreated] = useState(false);
+  const [regions, setRegions] = useState([]);
+  const [environments, setEnvironments] = useState([]);
   const [specie, setSpecie] = useState({
     name: "",
     description: "",
-    img_url: "",
-    environment: "",
-    region: ""
+    img_url: ""
   });
 
-  const [isCreated, setCreated] = useState(false);
+  useEffect(() => {
+    const fetchDropDowns = async () => {
+      const regions = await getAllRegions();
+      const environments = await getAllEnvironments();
+      setRegions(regions);
+      setEnvironments(environments);
+    };
+    fetchDropDowns();
+  }, []);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setProduct({
+    setSpecie({
       ...specie,
       [name]: value,
     });
@@ -25,15 +35,15 @@ const SpecieCreate = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    let newSpecie= specie
+    let newSpecie = specie;
     if (!specie.img_url) {
-        newSpecie={
+      newSpecie = {
         ...newSpecie,
         img_url:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1200px-No-Image-Placeholder.svg.png",
       };
     }
-    const created = await createSpecie(newSpecie);
+    const created = await postSpecie(newSpecie);
     setCreated({ created });
   };
 
@@ -45,6 +55,7 @@ const SpecieCreate = (props) => {
       <form
         className="flex space-y-6 flex-col justify-center items-center border-8 border-black-100 mb-52 bg-green-500"
         onSubmit={handleSubmit}
+        onChange={handleChange}
       >
         <input
           className="mt-5 bg-green-200"
@@ -52,38 +63,63 @@ const SpecieCreate = (props) => {
           value={specie.name}
           name="name"
           required
-          autoFocus
-          onChange={handleChange}
         />
         <input
           className="mt-5 bg-green-200"
           placeholder="Image Link"
           value={specie.img_url}
           name="img_url"
-          onChange={handleChange}
         />
         <input
           className="mt-5 bg-green-200"
           placeholder="description"
           value={specie.description}
-          name="specie"
+          name="description"
+          required
+        />
+        {/* <textarea
+          className="mt-5 bg-green-200"
+          rows={10}
+          placeholder="environment"
+          value={specie.environment.name}
+          name="environment"
           required
           onChange={handleChange}
         />
         <textarea
           className="mt-5 bg-green-200"
           rows={10}
-          placeholder="Description"
-          value={specie.environment}
-          name="environment"
+          placeholder="region"
+          value={specie.region.name}
+          name="region"
           required
           onChange={handleChange}
-        />
+        /> */}
+
+        <select name="region_id">
+          <option default hidden required>
+            select the region
+          </option>
+          {regions &&
+            regions.map((region) => (
+              <option value={region.id}>{region.name}</option>
+            ))}
+        </select>
+
+        <select name="environment_id">
+          <option default hidden required>
+            select the environment
+          </option>
+          {environments &&
+            environments.map((environment) => (
+              <option value={environment.id}>{environment.name}</option>
+            ))}
+        </select>
+
         <button type="submit" className="create-button">
           Add
         </button>
       </form>
-      
     </>
   );
 };
