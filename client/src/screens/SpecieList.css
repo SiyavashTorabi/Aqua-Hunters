@@ -1,0 +1,13 @@
+.species {
+
+display: grid;
+grid-template-columns: auto auto auto auto;
+margin: 30px;
+padding: 20px;
+}
+.specie-img {
+
+width: 300px;
+height: 160px;
+
+}

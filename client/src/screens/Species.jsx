@@ -3,6 +3,7 @@ import React from "react";
 import { useState, useEffect } from "react"; ////
 import Specie from '../components/Specie'
 import {getSpecies} from '../services/species'
+import "./SpecieList.css"
 
 export default function Species(props) {
   const { specieList, handleDelete } = props;
@@ -20,7 +21,7 @@ export default function Species(props) {
   
 	return (
     <>
-      <div className="">
+      <div className="species">
         {species.map((specie, index) => {
           
           return (
