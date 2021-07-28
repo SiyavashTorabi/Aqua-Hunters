@@ -42,10 +42,10 @@ const SpecieDetail = (props) => {
 
         <div className="details-button-container">
           <div className="detail ">
-            <div className="title text-xl">{specie.name}</div>
-            <div className="description text-base">{specie.description}</div>
-            <div className="price text-sm">{specie.region.name}</div>
-            <div className="price text-sm">{specie.environment.name}</div>
+            <div className="title-text-xl">{specie.name}</div>
+            <div className="price-text-sm">Region:{specie.region.name}</div>
+            <div className="price-text-sm">Environment:{specie.environment.name}</div>
+            <div className="description-text-base">{specie.description}</div>
           </div>
           <div className="button-container">
             <Link className="details-button" to={`/species/${specie.id}/edit`}>
