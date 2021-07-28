@@ -1,10 +1,13 @@
 form {
 display: inline-block;
 justify-content: space-between;
+place-items: center;
+align-content: center;
+text-align: center;
 border-radius: 46px;
-width: 200px;
-height: 300px;
-transform: translate(600px, 100px);
+width: 300px;
+height: 340px;
+transform: translate(560px, 100px);
 background-color: #6A7A9F;
 margin:10px;
 padding: 20px;
@@ -22,4 +25,23 @@ margin: 10px;
 .mt-d {
   display: flexbox;
   height: 60px;  
+}
+
+
+select {
+
+  display: flex;
+  transform: translate(56px, 5px);
+  margin: 10px;
+  height: 20px;
+}
+.create-button {
+
+display: inline-block;
+transform: translate(-5px, 15px);
+background-color: black;
+width: 100px;
+color: white;
+font-size: 20px;
+
 }
