@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import "./Forms.css"
 import { getAllRegions } from "../services/region";
 import { getAllEnvironments } from "../services/environments";
 import { Redirect } from "react-router-dom";

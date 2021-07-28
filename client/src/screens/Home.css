@@ -3,7 +3,7 @@
   display: block;
  
   inline-size: 550px;
-  transform: translate(400px,-140px);
+  transform: translate(470px,-140px);
 
 }
 .background{
@@ -17,7 +17,7 @@
 .logo {
 
   display: inline-flex;
-  transform: translate(560px,370px);
+  transform: translate(590px,370px);
   width: 250px;
   height: 300px;
   

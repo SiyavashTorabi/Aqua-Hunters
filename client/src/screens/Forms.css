@@ -1,0 +1,12 @@
+form {
+display: inline-block;
+justify-content: space-between;
+border: 3px solid black;
+width: 180px;
+height: 300px;
+transform: translate(600px, 100px);
+justify-content: center;
+align-content: center;
+margin:10px;
+padding: 20px;
+}
