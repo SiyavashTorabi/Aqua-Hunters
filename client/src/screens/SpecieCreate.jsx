@@ -77,7 +77,7 @@ const SpecieCreate = (props) => {
           name="description"
           required
         />
-        <select name="region-mt">
+        <select name="region_id">
           <option className="region-mt" default hidden required>
             select the region
           </option>
@@ -87,7 +87,7 @@ const SpecieCreate = (props) => {
             ))}
         </select>
 
-        <select name="envi-mt">
+        <select name="environment_id">
           <option default hidden required>
             select the environment
           </option>

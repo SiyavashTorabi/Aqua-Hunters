@@ -11,7 +11,7 @@ const Nav = ({ user }) => {
       <div className="nav-bar" >
 
         <NavLink className="link-A" to="/" >Aqua Hunters</NavLink>
-        <NavLink className="link" to="/species">species List</NavLink>
+        <NavLink className="link" to="/species">Species List</NavLink>
         <NavLink className="link" to="/add-specie">Add Specie</NavLink>
         <div className="links">
 

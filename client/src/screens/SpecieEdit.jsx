@@ -64,48 +64,30 @@ const SpecieEdit = (props) => {
   return (
     <>
     <form
-      className="flex space-y-6 flex-col justify-center items-center border-8 border-black-100 mb-52 bg-green-500"
+      className="flex "
       onSubmit={handleSubmit}
       onChange={handleChange}
     >
       <input
-        className="mt-5 bg-green-200"
+        className="mt"
         placeholder="name"
         value={specie.name}
         name="name"
         required
       />
       <input
-        className="mt-5 bg-green-200"
+        className="mt"
         placeholder="Image Link"
         value={specie.img_url}
         name="img_url"
       />
       <input
-        className="mt-5 bg-green-200"
+        className="mt-d"
         placeholder="description"
         value={specie.description}
         name="description"
         required
       />
-      {/* <textarea
-        className="mt-5 bg-green-200"
-        rows={10}
-        placeholder="environment"
-        value={specie.environment.name}
-        name="environment"
-        required
-        onChange={handleChange}
-      />
-      <textarea
-        className="mt-5 bg-green-200"
-        rows={10}
-        placeholder="region"
-        value={specie.region.name}
-        name="region"
-        required
-        onChange={handleChange}
-      /> */}
 
       <select name="region_id">
         <option default hidden required>
