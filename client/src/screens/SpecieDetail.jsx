@@ -59,7 +59,6 @@ const SpecieDetail = (props) => {
             </Link>
             <button
               className="details-button"
-              onClick={() => deleteSpecie(specie.id)}
               onClick={handleDelete}
             >
               Delete

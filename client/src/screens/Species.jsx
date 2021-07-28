@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+
 import React from "react";
 import { useState, useEffect } from "react"; ////
 import Specie from '../components/Specie'
@@ -6,6 +6,8 @@ import {getSpecies} from '../services/species'
 
 export default function Species(props) {
   const { specieList, handleDelete } = props;
+  console.log(specieList)
+  console.log(handleDelete)
   const [species, setSpecies] = useState([]); 
   useEffect(() => {
     const fetchSpecies = async () => {
