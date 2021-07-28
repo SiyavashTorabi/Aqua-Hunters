@@ -1,7 +1,25 @@
 .h1-text {
 
+  display: block;
+ 
+  inline-size: 550px;
+  transform: translate(400px,-140px);
+
+}
+.background{
+  display: block;
+  background-image: url("https://img.wallpapersafari.com/desktop/1366/768/77/43/65sJdG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+ height: 700px;
+}
+
+.logo {
+
   display: inline-flex;
-  border: 3px solid black;
-  transform: translateX(200px)
+  transform: translate(560px,370px);
+  width: 250px;
+  height: 300px;
+  
 
 }

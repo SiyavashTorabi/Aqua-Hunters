@@ -1,4 +1,5 @@
 import Species from './screens/Species';
+import "./App.css"
 import { Route, Switch } from "react-router";
 import Home from './screens/Home'
 import Navbar from "./components/Navbar"
