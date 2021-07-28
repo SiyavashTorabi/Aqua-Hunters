@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import { getOneSpecie, deleteSpecie } from "../services/species";
 import { useParams, Link } from "react-router-dom";
-
+import "./SpecieDetail.css"
 import { useHistory } from "react-router-dom";
 
 ///
@@ -13,7 +13,7 @@ const SpecieDetail = (props) => {
   const history = useHistory();
   const { id } = useParams();
   useEffect(() => {
-    const fetchSpecie= async () => {
+    const fetchSpecie = async () => {
       const specie = await getOneSpecie(id);
       setSpecie(specie);
       setLoaded(true);
@@ -30,7 +30,7 @@ const SpecieDetail = (props) => {
     console.log(res);
     history.push("/species");
   };
-  console.log(specie)
+  console.log(specie);
   return (
     <>
       <div className="species-detail">
@@ -39,28 +39,19 @@ const SpecieDetail = (props) => {
           src={specie.img_url}
           alt={specie.name}
         />
-        
+
         <div className="details-button-container">
           <div className="detail ">
             <div className="title text-xl">{specie.name}</div>
             <div className="description text-base">{specie.description}</div>
             <div className="price text-sm">{specie.region.name}</div>
             <div className="price text-sm">{specie.environment.name}</div>
-
-        
-
           </div>
           <div className="button-container">
-            <Link
-              className="details-button"
-              to={`/species/${specie.id}/edit`}
-            >
+            <Link className="details-button" to={`/species/${specie.id}/edit`}>
               Edit
             </Link>
-            <button
-              className="details-button"
-              onClick={handleDelete}
-            >
+            <button className="details-button" onClick={handleDelete}>
               Delete
             </button>
           </div>
@@ -71,4 +62,3 @@ const SpecieDetail = (props) => {
 };
 
 export default SpecieDetail;
-
