@@ -53,31 +53,31 @@ const SpecieCreate = (props) => {
   return (
     <>
       <form
-        className="flex space-y-6 flex-col justify-center items-center border-8 border-black-100 mb-52 bg-green-500"
+        className="mt"
         onSubmit={handleSubmit}
         onChange={handleChange}
       >
         <input
-          className="mt-5 bg-green-200"
+          className="mt"
           placeholder="name"
           value={specie.name}
           name="name"
           required
         />
         <input
-          className="mt-5 bg-green-200"
+          className="mt"
           placeholder="Image Link"
           value={specie.img_url}
           name="img_url"
         />
         <input
-          className="mt-5 bg-green-200"
+          className="mt-d"
           placeholder="description"
           value={specie.description}
           name="description"
           required
         />
-        <select name="region_id">
+        <select name="region-mt">
           <option default hidden required>
             select the region
           </option>
@@ -87,7 +87,7 @@ const SpecieCreate = (props) => {
             ))}
         </select>
 
-        <select name="environment_id">
+        <select name="envi-mt">
           <option default hidden required>
             select the environment
           </option>
