@@ -20,7 +20,7 @@ export default function Species(props) {
 
   
 	return (
-    <>
+    <div className="background_img">
       <div className="species">
         {species.map((specie, index) => {
           
@@ -40,6 +40,6 @@ export default function Species(props) {
         })}
       </div>
       
-    </>
+    </div>
   );
 }

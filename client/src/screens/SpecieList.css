@@ -1,9 +1,15 @@
+
+
 .species {
 
 display: grid;
 grid-template-columns: auto auto auto auto;
+justify-content: space-evenly;
+grid-template-columns: 300px 300px 300px 300px;
+align-items: center;
 margin: 30px;
 padding: 20px;
+
 }
 .specie-img {
 

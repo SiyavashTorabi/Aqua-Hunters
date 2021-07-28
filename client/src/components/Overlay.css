@@ -1,0 +1,12 @@
+.specie-overlay {
+display: block;
+background-color: #66A096;
+color: black;
+text-decoration: none;
+  border: 3px solid black;
+  margin: 18px;
+  height: 100px;
+}
+.kir {
+  text-decoration: none;
+}
