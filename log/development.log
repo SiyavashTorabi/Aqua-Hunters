@@ -22320,3 +22320,2207 @@ Processing by SpeciesController#show as HTML
 Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 1.5ms | Allocations: 2149)
 
 
+Started GET "/species/4" for ::1 at 2021-07-28 05:04:59 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSpecies Load (0.6ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (1.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 53ms (Views: 15.1ms | ActiveRecord: 23.1ms | Allocations: 19555)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:05:07 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.4ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (1.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (1.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 41ms (Views: 36.0ms | ActiveRecord: 4.4ms | Allocations: 11771)
+
+
+Started GET "/species/11" for ::1 at 2021-07-28 05:05:09 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mSpecies Load (0.6ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (0.6ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 13ms (Views: 7.4ms | ActiveRecord: 1.6ms | Allocations: 2168)
+
+
+Started DELETE "/species/11" for ::1 at 2021-07-28 05:05:11 -0500
+Processing by SpeciesController#destroy as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mSpecies Load (0.4ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/species_controller.rb:40:in `destroy'
+  [1m[36mSpecies Destroy (1.8ms)[0m  [1m[31mDELETE FROM "species" WHERE "species"."id" = $1[0m  [["id", 11]]
+  ↳ app/controllers/species_controller.rb:40:in `destroy'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/species_controller.rb:40:in `destroy'
+Completed 204 No Content in 13ms (ActiveRecord: 3.5ms | Allocations: 1963)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:05:11 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.4ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.5ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.5ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.1ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 2.4ms | Allocations: 10181)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:07:28 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (2.6ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.5ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.2ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 30ms (Views: 25.2ms | ActiveRecord: 4.2ms | Allocations: 10200)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:08:06 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (4.6ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.2ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 42ms (Views: 34.3ms | ActiveRecord: 6.5ms | Allocations: 10180)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:08:16 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.6ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 33ms (Views: 30.2ms | ActiveRecord: 2.8ms | Allocations: 10179)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:08:25 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.9ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.1ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 60ms (Views: 55.9ms | ActiveRecord: 2.7ms | Allocations: 10180)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:08:43 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.8ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 2.7ms | Allocations: 10179)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:09:11 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (4.2ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.7ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.6ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.6ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 17.3ms | ActiveRecord: 7.5ms | Allocations: 10178)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:09:21 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (2.6ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.5ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (1.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (4.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (3.7ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 82ms (Views: 68.9ms | ActiveRecord: 12.9ms | Allocations: 10179)
+
+
+Started GET "/species/11" for ::1 at 2021-07-28 05:09:22 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mSpecies Load (0.5ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+Completed 404 Not Found in 10ms (ActiveRecord: 0.5ms | Allocations: 536)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Species with 'id'=11):
+  
+app/controllers/species_controller.rb:46:in `set_species'
+Started GET "/species" for ::1 at 2021-07-28 05:09:23 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.4ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 2.4ms | Allocations: 10177)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:09:30 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.4ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.6ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.6ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 2.8ms | Allocations: 10178)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:09:39 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.5ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (1.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.1ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 30ms (Views: 26.4ms | ActiveRecord: 3.3ms | Allocations: 10178)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:09:48 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.6ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.8ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.6ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.2ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 32ms (Views: 27.6ms | ActiveRecord: 3.2ms | Allocations: 10178)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:10:02 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.7ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.6ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.2ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 33ms (Views: 29.5ms | ActiveRecord: 2.9ms | Allocations: 10179)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:10:04 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.5ms | Allocations: 1053)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:10:04 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 891)
+
+
+Started POST "/species" for ::1 at 2021-07-28 05:10:12 -0500
+Processing by SpeciesController#create as HTML
+  Parameters: {"species"=>{"name"=>"xcxc", "description"=>"zdcxc", "img_url"=>"xcx", "region_id"=>"4", "environment_id"=>"2"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/species_controller.rb:22:in `create'
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:22:in `create'
+  [1m[36mRegion Load (0.7ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:22:in `create'
+  [1m[36mSpecies Create (21.4ms)[0m  [1m[32mINSERT INTO "species" ("name", "description", "img_url", "environment_id", "region_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "xcxc"], ["description", "zdcxc"], ["img_url", "xcx"], ["environment_id", 2], ["region_id", 4], ["created_at", "2021-07-28 10:10:12.611433"], ["updated_at", "2021-07-28 10:10:12.611433"]]
+  ↳ app/controllers/species_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/species_controller.rb:22:in `create'
+Completed 201 Created in 52ms (Views: 4.0ms | ActiveRecord: 29.5ms | Allocations: 4155)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:10:12 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.6ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.6ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 36ms (Views: 32.7ms | ActiveRecord: 2.8ms | Allocations: 11702)
+
+
+Started GET "/species/12" for ::1 at 2021-07-28 05:10:14 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.9ms | Allocations: 2148)
+
+
+Started DELETE "/species/12" for ::1 at 2021-07-28 05:10:17 -0500
+Processing by SpeciesController#destroy as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSpecies Load (0.6ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/species_controller.rb:40:in `destroy'
+  [1m[36mSpecies Destroy (0.9ms)[0m  [1m[31mDELETE FROM "species" WHERE "species"."id" = $1[0m  [["id", 12]]
+  ↳ app/controllers/species_controller.rb:40:in `destroy'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/species_controller.rb:40:in `destroy'
+Completed 204 No Content in 12ms (ActiveRecord: 2.4ms | Allocations: 1772)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:10:17 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.4ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 2.4ms | Allocations: 10178)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:12:17 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.6ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.2ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.1ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 41ms (Views: 37.7ms | ActiveRecord: 2.4ms | Allocations: 10179)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:12:33 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (23.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 3.9ms | ActiveRecord: 23.4ms | Allocations: 969)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:12:33 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 807)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:13:56 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.5ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:13:56 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (5.2ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 5.7ms | ActiveRecord: 5.2ms | Allocations: 807)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:14:35 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.4ms | Allocations: 971)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:14:35 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.4ms | Allocations: 807)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:16:27 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (6.8ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 10.7ms | ActiveRecord: 6.8ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:16:27 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.8ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.8ms | Allocations: 807)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:17:41 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (1.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 1.4ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:17:41 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.5ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms | Allocations: 807)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:18:06 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (7.6ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (6.8ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (6.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 84ms (Views: 59.0ms | ActiveRecord: 21.9ms | Allocations: 10179)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:18:07 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.9ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.9ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:18:07 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.4ms | Allocations: 807)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:21:44 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.6ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 70ms (Views: 63.3ms | ActiveRecord: 0.6ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:21:44 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.4ms | Allocations: 807)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:21:53 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (23.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 3.6ms | ActiveRecord: 23.3ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:21:53 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 807)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:24:41 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (6.7ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 19.5ms | ActiveRecord: 6.7ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:24:41 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (7.2ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 2.0ms | ActiveRecord: 7.2ms | Allocations: 807)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:25:42 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (2.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 77ms (Views: 71.9ms | ActiveRecord: 2.0ms | Allocations: 969)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:25:42 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.3ms | Allocations: 808)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:25:50 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.6ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.6ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:25:50 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.9ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.9ms | Allocations: 808)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:25:59 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (2.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 2.5ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:25:59 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 807)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:25:59 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.9ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.9ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:25:59 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 807)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:26:13 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (1.1ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 1.1ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:26:13 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (6.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 5.7ms | ActiveRecord: 6.3ms | Allocations: 807)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:26:37 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (1.6ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 1.6ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:26:37 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.3ms | Allocations: 807)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:26:42 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.5ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:26:42 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 807)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:26:58 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.4ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:26:58 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 807)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:27:12 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (1.1ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 1.1ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:27:12 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.3ms | Allocations: 807)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:28:41 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (1.0ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (7.8ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (8.9ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (8.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.2ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (8.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 104ms (Views: 67.2ms | ActiveRecord: 34.2ms | Allocations: 10178)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:28:41 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.4ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:28:42 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 807)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:28:59 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (1.7ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 1.7ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:28:59 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 807)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:30:09 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.7ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.7ms | Allocations: 969)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:30:09 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 808)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:32:14 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 6.7ms | ActiveRecord: 0.4ms | Allocations: 969)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:32:14 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (22.9ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 36ms (Views: 12.6ms | ActiveRecord: 22.9ms | Allocations: 807)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:32:43 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.9ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 0.9ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:32:43 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.5ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.5ms | Allocations: 807)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:32:48 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.4ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:32:48 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 807)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:33:12 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.9ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.9ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:33:12 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.6ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.6ms | Allocations: 807)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:33:15 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (6.5ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (6.2ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (4.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.1ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.8ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.5ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.7ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 79ms (Views: 58.6ms | ActiveRecord: 19.4ms | Allocations: 10178)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:33:20 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.3ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:33:20 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (1.8ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 1.8ms | Allocations: 807)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:33:22 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.4ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.7ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.8ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.7ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 52ms (Views: 47.9ms | ActiveRecord: 3.7ms | Allocations: 10178)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:33:34 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (2.1ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 2.1ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:33:34 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 807)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:33:51 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.4ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:33:51 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (9.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 2.3ms | ActiveRecord: 9.3ms | Allocations: 808)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:33:52 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.4ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.5ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.1ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.1ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 37ms (Views: 33.6ms | ActiveRecord: 2.6ms | Allocations: 10179)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:34:07 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (3.7ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (1.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 73ms (Views: 64.2ms | ActiveRecord: 7.0ms | Allocations: 10178)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:34:08 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.8ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (1.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (1.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.6ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.6ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (1.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 43ms (Views: 36.4ms | ActiveRecord: 6.0ms | Allocations: 10178)
+
+
+Started GET "/species/5" for ::1 at 2021-07-28 05:34:11 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSpecies Load (0.4ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (0.7ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (2.1ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 21ms (Views: 10.4ms | ActiveRecord: 3.3ms | Allocations: 2149)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:34:15 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.3ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:34:15 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 807)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:34:27 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.7ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.7ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:34:27 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (10.1ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 1.6ms | ActiveRecord: 10.1ms | Allocations: 807)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:34:28 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.6ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.6ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:34:28 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.4ms | Allocations: 807)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:34:29 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.4ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 54ms (Views: 50.6ms | ActiveRecord: 2.4ms | Allocations: 10179)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 05:34:33 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.8ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.8ms | Allocations: 969)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 05:34:33 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.6ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.6ms | Allocations: 807)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:34:33 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.5ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (1.6ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.9ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 39ms (Views: 34.0ms | ActiveRecord: 4.3ms | Allocations: 10178)
+
+
+Started GET "/species/5" for ::1 at 2021-07-28 05:34:34 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (0.7ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (0.8ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 15ms (Views: 10.1ms | ActiveRecord: 1.7ms | Allocations: 2149)
+
+
+Started GET "/species/5" for ::1 at 2021-07-28 05:35:02 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (0.7ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 26ms (Views: 5.5ms | ActiveRecord: 1.5ms | Allocations: 2149)
+
+
+Started GET "/species/5" for ::1 at 2021-07-28 05:35:14 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (13.6ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 47ms (Views: 20.6ms | ActiveRecord: 14.1ms | Allocations: 2149)
+
+
+Started GET "/species/5" for ::1 at 2021-07-28 05:35:21 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSpecies Load (1.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 13ms (Views: 7.0ms | ActiveRecord: 1.9ms | Allocations: 2149)
+
+
+Started GET "/species/5" for ::1 at 2021-07-28 05:35:32 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSpecies Load (1.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (1.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 16ms (Views: 9.0ms | ActiveRecord: 2.4ms | Allocations: 2149)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:36:15 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.6ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (1.2ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 39ms (Views: 35.4ms | ActiveRecord: 3.6ms | Allocations: 10179)
+
+
+Started GET "/species/6" for ::1 at 2021-07-28 05:36:15 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (0.5ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 15ms (Views: 8.5ms | ActiveRecord: 1.1ms | Allocations: 2149)
+
+
+Started GET "/species" for ::1 at 2021-07-28 05:36:19 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.4ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.9ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.6ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.5ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 41ms (Views: 37.6ms | ActiveRecord: 3.4ms | Allocations: 10179)
+
+
+Started GET "/species/1" for ::1 at 2021-07-28 05:36:20 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (1.5ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (3.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 19ms (Views: 9.2ms | ActiveRecord: 4.9ms | Allocations: 2149)
+
+
+Started GET "/species/1" for ::1 at 2021-07-28 05:37:14 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpecies Load (0.5ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 17ms (Views: 7.9ms | ActiveRecord: 1.0ms | Allocations: 2149)
+
+
+Started GET "/species" for ::1 at 2021-07-28 08:05:17 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (20.8ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (1.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.6ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 193ms (Views: 185.3ms | ActiveRecord: 63.4ms | Allocations: 12287)
+
+
+Started GET "/species/4" for ::1 at 2021-07-28 08:05:22 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSpecies Load (0.6ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (1.5ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (1.6ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 25ms (Views: 7.8ms | ActiveRecord: 3.6ms | Allocations: 2152)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 08:05:26 -0500
+Started GET "/species/4" for ::1 at 2021-07-28 08:05:26 -0500
+Processing by RegionsController#index as HTML
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRegion Load (4.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 4.0ms | Allocations: 1259)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 08:05:26 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.5ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.5ms | Allocations: 807)
+
+
+  [1m[36mSpecies Load (0.8ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (0.6ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (0.8ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 174ms (Views: 24.3ms | ActiveRecord: 13.6ms | Allocations: 6979)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 08:05:32 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (2.6ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 2.6ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 08:05:32 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.8ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.8ms | Allocations: 807)
+
+
+Started GET "/species" for ::1 at 2021-07-28 08:05:42 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.8ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.5ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (1.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.7ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.7ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (1.9ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 49ms (Views: 42.1ms | ActiveRecord: 6.5ms | Allocations: 10178)
+
+
+Started GET "/species/3" for ::1 at 2021-07-28 08:05:45 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSpecies Load (2.3ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (4.6ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (0.7ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 27ms (Views: 7.4ms | ActiveRecord: 7.6ms | Allocations: 2155)
+
+
+Started GET "/species/3" for ::1 at 2021-07-28 08:05:47 -0500
+Started GET "/regions" for ::1 at 2021-07-28 08:05:47 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.6ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+  [1m[36mSpecies Load (3.9ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.6ms | Allocations: 1126)
+
+
+  [1m[36mEnvironment Load (4.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Started GET "/environments" for ::1 at 2021-07-28 08:05:47 -0500
+  [1m[36mRegion Load (1.1ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Processing by EnvironmentsController#index as HTML
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 26ms (Views: 9.6ms | ActiveRecord: 9.4ms | Allocations: 4066)
+
+
+  [1m[36mEnvironment Load (3.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 5.0ms | ActiveRecord: 3.3ms | Allocations: 1368)
+
+
+Started GET "/species" for ::1 at 2021-07-28 08:06:26 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.5ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (15.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.6ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.6ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (1.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.8ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.1ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (1.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 77ms (Views: 56.0ms | ActiveRecord: 20.2ms | Allocations: 10178)
+
+
+Started GET "/species/1" for ::1 at 2021-07-28 08:06:27 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpecies Load (0.5ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (1.5ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (1.9ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 20ms (Views: 11.4ms | ActiveRecord: 3.9ms | Allocations: 2149)
+
+
+Started GET "/species" for ::1 at 2021-07-28 08:06:50 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (1.2ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.7ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 73ms (Views: 68.4ms | ActiveRecord: 3.8ms | Allocations: 10179)
+
+
+Started GET "/species/3" for ::1 at 2021-07-28 08:07:18 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSpecies Load (0.8ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (0.6ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 36ms (Views: 12.4ms | ActiveRecord: 1.8ms | Allocations: 2154)
+
+
+Started GET "/species/3" for ::1 at 2021-07-28 08:07:21 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSpecies Load (22.9ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (1.7ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 38ms (Views: 9.5ms | ActiveRecord: 25.0ms | Allocations: 2154)
+
+
+Started GET "/species" for ::1 at 2021-07-28 08:07:36 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.6ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.6ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (1.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 56ms (Views: 42.8ms | ActiveRecord: 4.2ms | Allocations: 10179)
+
+
+Started GET "/species/1" for ::1 at 2021-07-28 08:07:37 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpecies Load (4.5ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (0.8ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 24ms (Views: 11.8ms | ActiveRecord: 5.7ms | Allocations: 2149)
+
+
+Started GET "/species" for ::1 at 2021-07-28 08:11:31 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (6.5ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.6ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (8.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 117ms (Views: 95.8ms | ActiveRecord: 16.9ms | Allocations: 10178)
+
+
+Started GET "/species/4" for ::1 at 2021-07-28 08:11:32 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSpecies Load (1.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (0.7ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (1.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 17ms (Views: 9.1ms | ActiveRecord: 3.1ms | Allocations: 2149)
+
+
+Started GET "/species/4" for ::1 at 2021-07-28 08:12:15 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSpecies Load (1.7ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (4.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (23.1ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 47ms (Views: 9.2ms | ActiveRecord: 29.2ms | Allocations: 2149)
+
+
+Started GET "/species" for ::1 at 2021-07-28 08:12:20 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (1.0ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (2.9ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.6ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 88ms (Views: 81.6ms | ActiveRecord: 6.1ms | Allocations: 10179)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 08:12:26 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.7ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.7ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 08:12:26 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 807)
+
+
+Started GET "/species" for ::1 at 2021-07-28 08:12:27 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.6ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (5.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (21.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 69ms (Views: 39.5ms | ActiveRecord: 28.9ms | Allocations: 10178)
+
+
+Started GET "/species/5" for ::1 at 2021-07-28 08:12:28 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSpecies Load (11.7ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (0.7ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (3.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 30ms (Views: 9.3ms | ActiveRecord: 15.4ms | Allocations: 2150)
+
+
+Started GET "/species" for ::1 at 2021-07-28 08:32:45 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (8.4ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (1.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.7ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.2ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.8ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 149ms (Views: 146.4ms | ActiveRecord: 45.4ms | Allocations: 12287)
+
+
+Started GET "/species/1" for ::1 at 2021-07-28 08:32:47 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpecies Load (0.5ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (0.6ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 17ms (Views: 10.8ms | ActiveRecord: 1.6ms | Allocations: 2152)
+
+
+Started GET "/species/1" for ::1 at 2021-07-28 08:35:31 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpecies Load (36.7ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (0.6ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (1.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 71ms (Views: 6.2ms | ActiveRecord: 38.3ms | Allocations: 2149)
+
+
+Started GET "/species/1" for ::1 at 2021-07-28 08:35:39 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpecies Load (6.6ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (2.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (0.7ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 21ms (Views: 7.1ms | ActiveRecord: 9.7ms | Allocations: 2149)
+
+
+Started GET "/species/1" for ::1 at 2021-07-28 08:36:14 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpecies Load (6.7ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (0.9ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 58ms (Views: 5.8ms | ActiveRecord: 8.1ms | Allocations: 2149)
+
+
+Started GET "/species/1" for ::1 at 2021-07-28 08:36:44 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpecies Load (16.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (0.3ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (1.2ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 38ms (Views: 11.2ms | ActiveRecord: 17.8ms | Allocations: 2150)
+
+
+Started GET "/species/1" for ::1 at 2021-07-28 08:37:31 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpecies Load (0.9ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (0.6ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 21ms (Views: 15.2ms | ActiveRecord: 1.9ms | Allocations: 2149)
+
+
+Started GET "/species/1" for ::1 at 2021-07-28 08:38:44 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpecies Load (1.9ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (0.6ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 53ms (Views: 22.3ms | ActiveRecord: 2.9ms | Allocations: 2152)
+
+
+Started GET "/species/1" for ::1 at 2021-07-28 08:40:39 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpecies Load (0.5ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (0.4ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 31ms (Views: 9.9ms | ActiveRecord: 1.2ms | Allocations: 2149)
+
+
+Started GET "/species" for ::1 at 2021-07-28 08:46:38 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (1.6ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (1.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.5ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (1.2ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 163ms (Views: 159.7ms | ActiveRecord: 42.0ms | Allocations: 12233)
+
+
+Started GET "/species/2" for ::1 at 2021-07-28 08:46:41 -0500
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSpecies Load (0.7ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:46:in `set_species'
+  [1m[36mEnvironment Load (1.1ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+  [1m[36mRegion Load (1.1ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:14:in `show'
+Completed 200 OK in 23ms (Views: 12.3ms | ActiveRecord: 2.9ms | Allocations: 2157)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 08:46:45 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (1.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 1.3ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 08:46:45 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.5ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.5ms | Allocations: 807)
+
+
+Started GET "/species" for ::1 at 2021-07-28 08:46:51 -0500
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.7ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (0.6ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (2.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.3ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mEnvironment Load (1.1ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (0.4ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Region Load (0.0ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mCACHE Environment Load (0.0ms)[0m  [1m[34mSELECT "environments".* FROM "environments" WHERE "environments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+  [1m[36mRegion Load (10.8ms)[0m  [1m[34mSELECT "regions".* FROM "regions" WHERE "regions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/species_controller.rb:8:in `index'
+Completed 200 OK in 78ms (Views: 58.0ms | ActiveRecord: 16.2ms | Allocations: 10178)
+
+
+Started GET "/regions" for ::1 at 2021-07-28 08:47:06 -0500
+Processing by RegionsController#index as HTML
+  [1m[36mRegion Load (0.6ms)[0m  [1m[34mSELECT "regions".* FROM "regions"[0m
+  ↳ app/controllers/regions_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.6ms | Allocations: 968)
+
+
+Started GET "/environments" for ::1 at 2021-07-28 08:47:06 -0500
+Processing by EnvironmentsController#index as HTML
+  [1m[36mEnvironment Load (0.5ms)[0m  [1m[34mSELECT "environments".* FROM "environments"[0m
+  ↳ app/controllers/environments_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.5ms | Allocations: 807)
+
+

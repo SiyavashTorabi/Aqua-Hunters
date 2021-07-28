@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar"
 import SpecieDetail from './screens/SpecieDetail'
 import SpecieCreate from "./screens/SpecieCreate"
 import SpecieEdit from "./screens/SpecieEdit"
+
 function App() {
   return (
     <div>
@@ -31,6 +32,7 @@ function App() {
         </Route>
 
       </Switch>
+      
       </div>
   )}
 

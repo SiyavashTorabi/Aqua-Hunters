@@ -46,6 +46,9 @@ font-size: 20px;
 
 }
 @media only screen and (max-width: 600px) {
+  body {
+    max-width: 600px;
+  }
   form {
     background-color: rgb(168, 216, 13);
   }

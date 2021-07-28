@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"; ////
 import Specie from "../components/Specie";
 import { getSpecies } from "../services/species";
 import "./SpecieList.css";
-
+import Footer from "../components/Footer"
 export default function Species(props) {
   const { specieList, handleDelete } = props;
   console.log(specieList);
@@ -28,6 +28,7 @@ export default function Species(props) {
           );
         })}
       </div>
+      <Footer />
     </div>
   );
 }
