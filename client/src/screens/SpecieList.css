@@ -6,17 +6,17 @@
   justify-content: space-evenly;
   grid-template-columns: 300px 300px 300px 300px;
   align-items: center;
-  opacity: 100%;
+  opacity: 100;
   padding: 20px;
 }
 .specie-img {
-  opacity: 100%;
+  opacity: 100;
   width: 300px;
   height: 160px;
 }
 .back-g {
   /* background-image: url("https://img.wallpapersafari.com/desktop/1366/768/77/43/65sJdG.jpg"); */
   background-repeat: no-repeat;
-  background-size: 100%;
-  opacity: 100%;
+  background-size: 100;
+  opacity: 100;
 }
