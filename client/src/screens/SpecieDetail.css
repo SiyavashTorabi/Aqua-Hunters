@@ -1,6 +1,6 @@
 body {
   display: block;
-  background-image: url("https://img.wallpapersafari.com/desktop/1366/768/77/43/65sJdG.jpg");
+  /* background-image: url("https://img.wallpapersafari.com/desktop/1366/768/77/43/65sJdG.jpg"); */
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -42,7 +42,7 @@ body {
   transform: translate(485px, 50px);
 
   width: 90px;
-  /* margin-bottom: 20px; */
+
 }
 .details-button {
   display: inline-flex;

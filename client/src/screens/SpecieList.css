@@ -6,7 +6,7 @@
   justify-content: space-evenly;
   grid-template-columns: 300px 300px 300px 300px;
   align-items: center;
-  /* margin: 30px; */
+  opacity: 100%;
   padding: 20px;
 }
 .specie-img {
@@ -18,8 +18,5 @@
   /* background-image: url("https://img.wallpapersafari.com/desktop/1366/768/77/43/65sJdG.jpg"); */
   background-repeat: no-repeat;
   background-size: 100%;
-  opacity: 100%;
-}
-.specie-img {
   opacity: 100%;
 }
